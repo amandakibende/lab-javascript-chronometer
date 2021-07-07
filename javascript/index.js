@@ -4,6 +4,18 @@ const chronometer = new Chronometer();
 const btnLeftElement = document.getElementById('btnLeft');
 const btnRightElement = document.getElementById('btnRight');
 
+btnLeftElement.onclick = function () {
+  if(btnLeftElement.className === 'btn start'){
+  return "STOP";
+  }
+  if (btnLeftElement.className === 'btn stop'){
+    return "SPLIT";
+  }
+  console.log(btnLeftElement);
+} 
+
+
+
 // get the DOM elements that will serve us to display the time:
 const minDecElement = document.getElementById('minDec');
 const minUniElement = document.getElementById('minUni');

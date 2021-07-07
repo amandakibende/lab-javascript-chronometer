@@ -61,7 +61,7 @@ class Chronometer {
   split() {
     // ... your code goes here
 
-    let second = this.getSeconds();
+    let seconds = this.getSeconds();
     let minutes = this.getMinutes();
 
 
