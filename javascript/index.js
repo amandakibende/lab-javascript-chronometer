@@ -1,19 +1,35 @@
 const chronometer = new Chronometer();
 
+
 // get the buttons:
 const btnLeftElement = document.getElementById('btnLeft');
 const btnRightElement = document.getElementById('btnRight');
 
+
+// I wanted to call the functions inside chronometer in order to return 
+//the correct answer when the btn is clicked left or right.
+
+
 btnLeftElement.onclick = function () {
   if(btnLeftElement.className === 'btn start'){
-  return "STOP";
+    return this.chronometer = start();
   }
   if (btnLeftElement.className === 'btn stop'){
-    return "SPLIT";
+    return this.chronometer = stop();
   }
-  console.log(btnLeftElement);
+  
 } 
 
+
+btnRightElement.onclick = function () {
+  if(btnLeftElement.className === 'btn reset'){
+    return this.chronometer = reset ();
+  }
+  if (btnLeftElement.className === 'btn split'){
+    return this.chronometer = split();
+  }
+  
+} 
 
 
 // get the DOM elements that will serve us to display the time:
@@ -27,6 +43,13 @@ const splitsElement = document.getElementById('splits');
 
 function printTime() {
   // ... your code goes here
+
+  //inside the html wanted to return the minute and second functions 
+  //previously write.
+
+
+
+
 }
 
 function printMinutes() {
@@ -69,9 +92,12 @@ function setResetBtn() {
 // Start/Stop Button
 btnLeftElement.addEventListener('click', () => {
   // ... your code goes here
+  
 });
 
 // Reset/Split Button
 btnRightElement.addEventListener('click', () => {
   // ... your code goes here
 });
+
+
