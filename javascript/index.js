@@ -47,17 +47,17 @@ function printTime() {
   //inside the html wanted to return the minute and second functions 
   //previously write.
 
-
-
-
 }
 
 function printMinutes() {
   // ... your code goes here
+  return innerHTML.value = `${this.getminutes()}`;
 }
 
 function printSeconds() {
   // ... your code goes here
+
+  return innerHTML.value = `${this.getSeconds()}`;
 }
 
 // ==> BONUS
