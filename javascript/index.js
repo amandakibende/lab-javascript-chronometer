@@ -8,17 +8,25 @@ const btnRightElement = document.getElementById('btnRight');
 
 
 btnLeftElement.onclick = function () {
-  if(btnLeftElement.innerHTML === 'STOP'){
-    setStartBtn();
-  } else {
+
+  btnLeftElement.classList.toggle('stop')
+
+  if(btnLeftElement.innerHTML === 'START'){
     setStopBtn();
+    printSeconds();
+  } else {
+    setStartBtn();
   }
   
 } 
 
 
 btnRightElement.onclick = function () {
-  if(btnRightElement.innerHTML === 'RESET'){
+
+  btnLeftElement.classList.toggle('split')
+
+  if(btnRightElement.innerHTML === 'RESET')
+  {
     setSplitBtn();
   } else {
     setResetBtn();
@@ -89,7 +97,7 @@ function setStartBtn() {
 function setResetBtn() {
   // ... your code goes here
 
-  btnRightElement.innerHTML = 'RESET'
+  btnRightElement.innerHTML = 'RESET';
 }
 
 // Start/Stop Button
