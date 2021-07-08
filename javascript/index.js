@@ -6,29 +6,25 @@ const btnLeftElement = document.getElementById('btnLeft');
 const btnRightElement = document.getElementById('btnRight');
 
 
-// I wanted to call the functions inside chronometer in order to return 
-//the correct answer when the btn is clicked left or right.
-
 
 btnLeftElement.onclick = function () {
-  if(btnLeftElement.className === 'btn start'){
-    return this.chronometer = start();
-  }
-  if (btnLeftElement.className === 'btn stop'){
-    return this.chronometer = stop();
+  if(btnLeftElement.innerHTML === 'STOP'){
+    setStartBtn();
+  } else {
+    setStopBtn();
   }
   
 } 
 
 
 btnRightElement.onclick = function () {
-  if(btnLeftElement.className === 'btn reset'){
-    return this.chronometer = reset ();
-  }
-  if (btnLeftElement.className === 'btn split'){
-    return this.chronometer = split();
+  if(btnRightElement.innerHTML === 'RESET'){
+    setSplitBtn();
+  } else {
+    setResetBtn();
   }
   
+
 } 
 
 
@@ -51,13 +47,13 @@ function printTime() {
 
 function printMinutes() {
   // ... your code goes here
-  return innerHTML.value = `${this.getminutes()}`;
+  return minUniElement.innerHTML.value = chronometer.getminutes();
 }
 
 function printSeconds() {
   // ... your code goes here
 
-  return innerHTML.value = `${this.getSeconds()}`;
+  return secUniElement.innerHTML.value = chronometer.getSeconds();
 }
 
 // ==> BONUS
@@ -75,18 +71,25 @@ function clearSplits() {
 
 function setStopBtn() {
   // ... your code goes here
+
+  btnLeftElement.innerHTML = 'STOP';
 }
 
 function setSplitBtn() {
   // ... your code goes here
+
+  btnRightElement.innerHTML = 'SPLIT'
 }
 
 function setStartBtn() {
   // ... your code goes here
+  btnLeftElement.innerHTML = 'START';
 }
 
 function setResetBtn() {
   // ... your code goes here
+
+  btnRightElement.innerHTML = 'RESET'
 }
 
 // Start/Stop Button
